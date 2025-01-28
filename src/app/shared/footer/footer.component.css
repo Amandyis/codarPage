@@ -1,0 +1,41 @@
+section{
+    display: flex;
+    justify-content: space-between;
+    color: #ffffff;
+    background: #000000;
+    padding: 1.5rem 2rem;
+    align-items: self-start;
+}
+
+h3{
+    font-size: 25px;
+}
+
+p{
+    font-size: 11px;
+    font-weight: 300;
+}
+
+a{
+    font-size: 11px;
+    font-weight: 300;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.redes_sociais{
+    display: flex;
+    flex-direction: column;
+}
+
+.icones{
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}

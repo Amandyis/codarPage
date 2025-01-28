@@ -1,0 +1,87 @@
+<section>
+  <div class="imagem">
+    <img src="../../../assets/icones/video_call.png" alt="Video chamada" />
+  </div>
+  <div>
+    <p>Alavanque seu negócio com um</p>
+    <h2>Website incrível</h2>
+    <button>Solicitar orçamento</button>
+  </div>
+</section>
+
+<section class="segunda">
+  <div class="links">
+    <ul>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Domínio
+        personalizado
+      </li>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Hospedagem
+      </li>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Site
+        responsivo
+      </li>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Redes
+        sociais
+      </li>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Chat
+        online
+      </li>
+      <li>
+        <img src="../../../assets/icones/Vector.png" class="check" /> Blog
+        integrado
+      </li>
+    </ul>
+    <div class="imagem">
+      <img src="../../../assets/icones/coding_.png" alt="Codando" />
+    </div>
+  </div>
+
+  <div class="contato">
+    <p>Nossa equipe está à disposição!</p>
+    <div class="form">
+      <form (ngSubmit)="ligar()" [formGroup]="telefoneForm">
+        <input
+          type="tel"
+          placeholder="Celular"
+          formControlName="telefone"
+        />
+        <button type="submit">Ligamos para você</button>
+      </form>
+    </div>
+    <div *ngIf="telefoneForm.get('telefone')?.invalid && telefoneForm.get('telefone')?.touched">
+      <p *ngIf="telefoneForm.get('telefone')?.hasError('required')" class="erro">Telefone é obrigatório</p>
+      <p *ngIf="telefoneForm.get('telefone')?.hasError('pattern')" class="erro">Telefone inválido (formato: (XX) XXXX-XXXX)</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="terceira">
+  <div class="depoimento">
+    <img src="../../../assets/icones/Ellipse 4.png" class="user" />
+    <div class="conteudo">
+      <p class="comentario">
+        Já tive experiências com outras 4 empresas da área e a Codar é sem
+        sombra de dúvidas superior em todos os aspectos.
+      </p>
+      <p class="nome">Pedro Ferreira</p>
+      <p class="cliente">Construtora Minari</p>
+    </div>
+  </div>
+  <div class="depoimento">
+    <img src="../../../assets/icones/Ellipse 4.png" class="user" />
+    <div class="conteudo">
+      <p class="comentario">
+        Processos bem simples e criação de um site exatamente como a minha
+        escola queria!
+      </p>
+      <p class="nome">Maria Rita</p>
+      <p class="cliente">Escola Criança Feliz</p>
+    </div>
+  </div>
+</section>
